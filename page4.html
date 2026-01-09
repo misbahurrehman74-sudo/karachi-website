@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Karachi City - Page 4</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #4e342e; /* dark brown */
+            color: #a7c957; /* green text */
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATED SHAPES BACKGROUND ===== */
+        .shapes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                radial-gradient(circle, rgba(167,201,87,0.5) 1px, transparent 1px),
+                radial-gradient(circle, rgba(167,201,87,0.5) 1px, transparent 1px),
+                linear-gradient(45deg, rgba(167,201,87,0.2) 3px, transparent 3px),
+                linear-gradient(-45deg, rgba(167,201,87,0.2) 3px, transparent 3px);
+            background-size:
+                20px 20px, 30px 30px, 60px 60px, 60px 60px;
+            animation: moveShapes 120s linear infinite;
+        }
+
+        @keyframes moveShapes {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(-60px, -60px); }
+        }
+
+        .page-border {
+            margin: 30px auto;
+            padding: 25px;
+            border: 4px double #a7c957;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            background-color: #8d4b3e;
+            padding: 28px;
+            margin: 25px auto 35px auto;
+            border-top: 5px solid #a7c957;
+            border-bottom: 5px solid #a7c957;
+            border-radius: 16px;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            width: 85%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== SECTION BORDER FOR IMAGE + POINTS ===== */
+        .section-box {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            border: 3px solid #a7c957;
+            border-radius: 15px;
+            background: rgba(0,0,0,0.15);
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-left-image .image-box { order: 1; }
+        .section-left-image .points { order: 2; }
+        .section-right-image .image-box { order: 2; }
+        .section-right-image .points { order: 1; }
+
+        .image-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-box img {
+            width: 320px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid #a7c957;
+            transition: 0.3s ease;
+        }
+
+        .image-box img:hover {
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .image-caption {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            color: #d6f0a1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .points {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+            line-height: 1.9;
+            font-size: 17px;
+            min-height: 220px;
+            width: 320px;
+        }
+
+        .points li { margin-left: 10px; }
+
+        .buttons {
+            margin: 40px 0 60px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .buttons button {
+            background: linear-gradient(135deg, #222, #444);
+            color: #a7c957;
+            border: 2px solid #000;
+            padding: 14px 30px;
+            font-size: 17px;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+            transition: 0.35s ease;
+        }
+
+        .buttons button:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.8);
+            border-color: #a7c957;
+            color: #4e342e;
+        }
+
+        .made-by {
+            font-style: italic;
+            font-weight: bold;
+            color: #ffd700;
+            margin-left: 15px;
+            font-size: 16px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 900px) {
+            .section-box { flex-direction: column; align-items: center; }
+            .points, .image-box img { width: 80%; height: auto; }
+            .points { margin-top: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="shapes"></div>
+
+<div class="page-border">
+
+    <h1>Karachi – Lifestyle & Culture</h1>
+
+    <!-- FIRST IMAGE + POINTS INSIDE BORDER BOX -->
+    <div class="section-box section-left-image">
+        <div class="image-box">
+            <img src="4.jpg" alt="Karachi Lifestyle">
+            <div class="image-caption">Karachi Street Life</div>
+        </div>
+        <ul class="points">
+            <li>Karachi is a fast-paced city with lively streets and markets.</li>
+            <li>Residents balance work and leisure, enjoying parks, beaches, and cultural events.</li>
+            <li>Nightlife and commercial hubs are always active, reflecting city energy.</li>
+            <li>People are hardworking and entrepreneurial, contributing to Pakistan’s economy.</li>
+            <li>The city represents the dynamic urban lifestyle of Pakistan.</li>
+        </ul>
+    </div>
+
+    <!-- SECOND IMAGE + POINTS INSIDE BORDER BOX -->
+    <div class="section-box section-right-image">
+        <ul class="points">
+            <li>Karachi hosts diverse cultural events, art exhibitions, and festivals.</li>
+            <li>People from different ethnic backgrounds live together harmoniously.</li>
+            <li>Traditional celebrations and modern festivals reflect city’s diversity.</li>
+            <li>Food streets like Burns Road showcase Karachi’s culinary richness.</li>
+            <li>Educational and artistic institutions contribute to intellectual growth.</li>
+        </ul>
+        <div class="image-box">
+            <img src="42.jpg" alt="Karachi Culture">
+            <div class="image-caption">Karachi Cultural Events</div>
+        </div>
+    </div>
+
+    <!-- THIRD IMAGE + POINTS INSIDE BORDER BOX -->
+    <div class="section-box section-left-image">
+        <div class="image-box">
+            <img src="43.jpg" alt="Arts and Education">
+            <div class="image-caption">Arts & Education</div>
+        </div>
+        <ul class="points">
+            <li>Karachi hosts theatres, music concerts, and film festivals.</li>
+            <li>Art galleries and museums preserve cultural heritage.</li>
+            <li>Educational institutions provide learning and creative opportunities.</li>
+            <li>The city encourages literature, arts, and intellectual expression.</li>
+            <li>Urban lifestyle and modernity blend with cultural richness.</li>
+        </ul>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+        <a href="index.html"><button>1</button></a>
+        <a href="page2.html"><button>2</button></a>
+        <a href="page3.html"><button>3</button></a>
+        <a href="page4.html"><button>4</button></a>
+        <span class="made-by">made by Ayan ur Rehman</span>
+    </div>
+
+</div>
+
+</body>
+</html>
